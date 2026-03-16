@@ -1,0 +1,15 @@
+.git
+.gitignore
+.vscode
+build
+cmake-build-*
+out
+bin
+*.exe
+*.dll
+*.obj
+*.o
+*.a
+*.lib
+*.log
+README.md

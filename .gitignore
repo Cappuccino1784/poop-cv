@@ -1,0 +1,69 @@
+# Build outputs
+build/
+cmake-build-*/
+out/
+bin/
+lib/
+*.exe
+*.out
+*.app
+*.i*
+*.slo
+*.lo
+*.o
+*.obj
+*.gch
+*.pch
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exp
+*.pdb
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+CTestTestfile.cmake
+Testing/
+Makefile
+install_manifest.txt
+
+# Ninja / other generators
+.ninja_deps
+.ninja_log
+.ninja_*
+
+# VS Code
+.vscode/*.log
+.vscode/*.pid
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Archive files
+*.7z
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+
+# Environment files
+.env
+.env.*
+
+# Coverage / analysis
+*.gcda
+*.gcno
+*.gcov
+coverage/

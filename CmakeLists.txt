@@ -1,0 +1,30 @@
+cmake_minimum_required(VERSION 3.16)
+project(my_window C)
+
+set(CMAKE_C_STANDARD 99)
+
+add_executable(my_window WIN32 src/main.c)
+
+if(WIN32)
+    set(MSYS2_ROOT "C:/msys64/ucrt64")
+
+    add_library(raylib STATIC IMPORTED)
+    set_target_properties(raylib PROPERTIES
+        IMPORTED_LOCATION             "${MSYS2_ROOT}/lib/libraylib.a"
+        INTERFACE_INCLUDE_DIRECTORIES "${MSYS2_ROOT}/include"
+    )
+
+    target_link_libraries(my_window PRIVATE
+        raylib
+        glfw3
+        opengl32
+        gdi32
+        winmm
+        shell32
+        mingw32
+        m
+    )
+else()
+    find_package(raylib REQUIRED)
+    target_link_libraries(my_window PRIVATE raylib)
+endif()
